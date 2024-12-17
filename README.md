@@ -62,109 +62,78 @@
 ### 💳 거래(Transactions)
 ```json
 {
- "_id": ObjectId,
- "userId": ObjectId,
- "유형": 문자열,
- "금액": 번호,
- "category": 문자열,
- "날짜": 날짜,
- "설명": 문자열,
- "tags": 배열
+  "_id": ObjectId,
+  "userId": ObjectId,
+  "type": String,
+  "amount": Number,
+  "category": String,
+  "date": Date,
+  "description": String,
+  "tags": Array
 }
 ```
 
-### 📊 예산(예산)
-'''제이슨'''
+### 📊 예산(Budgets)
+```json
 {
- "_id": ObjectId,
- "userId": ObjectId,
- "월": 숫자,
- "연도": 숫자,
- "카테고리": [{
- "이름": 문자열,
- "금액": 번호
- }]
+  "_id": ObjectId,
+  "userId": ObjectId,
+  "month": Number,
+  "year": Number,
+  "categories": [{
+    "name": String,
+    "amount": Number
+  }]
 }
 ```
 
 ## 🔌 API 엔드포인트
 ### 🔐 사용자 관리
--POST /api/auth/register
--POST /api/auth/login
--GET /api/사용자/프로필
--PUT /api/사용자/프로필
+- POST /api/auth/register
+- POST /api/auth/login
+- GET /api/users/profile
+- PUT /api/users/profile
 
 ### 💰 거래 관리
--GET /api/transactions
--POST /api/transactions
--PUT /api/transactions/:id
--/api/transactions/:id 삭제
+- GET /api/transactions
+- POST /api/transactions
+- PUT /api/transactions/:id
+- DELETE /api/transactions/:id
 
 ### 📈 예산 관리
--GET /api/budgets
--POST /api /budgets
--PUT /api/budgets/:id
--GET /api / 예산/분석
+- GET /api/budgets
+- POST /api/budgets
+- PUT /api/budgets/:id
+- GET /api/budgets/analysis
 
 ## 📅 개발 일정
-### 🎯 1단계: 기초 설정 (1주)
+### 🎯 1단계: 기초 설정 (2주)
 - 프로젝트 초기 설정
 - 데이터베이스 설계
 - 기본 API 구조 설계
 
-### ⚡ 2단계: 핵심 기능 개발 (2주)
+### ⚡ 2단계: 핵심 기능 개발 (3주)
 - 사용자 인증 구현
 - 거래 CRUD 기능 구현
 - 기본 UI 컴포넌트 개발
 
-### 📊 3단계: 데이터 시각화 (2주)
+### 📊 3단계: 데이터 시각화 (3주)
 - 차트 및 그래프 구현
 - 데이터 분석 기능 개발
 - 리포트 생성 기능
 
-### 🚀 4단계: 고급 기능 및 최적화 (1주)
+### 🚀 4단계: 고급 기능 및 최적화 (2주)
 - 성능 최적화
 - 사용자 피드백 반영
 - 버그 수정 및 테스팅
 
-## ⚙️ 실행 방법
-1. 저장소 클론
-'''bash'''
-git 클론 [repos-url]
-```
-
-2. 의존성 설치
-'''bash'''
-CD 프론트엔드
-npm 설치
-CD ../백엔드
-npm 설치
-```
-
-3. 환경 변수 설정
-'''bash'''
-# .env 파일 생성
-몽고DBURI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-```
-
-4. 앱 실행
-'''bash'''
-# 프론트엔드
-CD 프론트엔드
-오후 시작
-
-# 백엔드
-CD 백엔드
-npm run dev
-```
 
 ## 🤝 기여 방법
-1.포크 더 프로젝트
-2.피처 브랜치 만들기 ('기트 체크아웃 -b 피처/놀라운 피처')
-3.변경 사항을 커밋하세요 ('git commit -m '놀라운 기능 추가하기')
-4.지점으로 푸시('깃 푸시 오리진 기능/놀라운 기능')
-5.풀 요청 열기
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📜 라이선스
-MIT 라이선스
+MIT License
